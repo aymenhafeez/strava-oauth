@@ -1,7 +1,7 @@
 # strava-oauth
 Lightweight python server that implements [Strava Oauth Web Flow](http://developers.strava.com/docs/authentication/)
 
-Fork updated to use `FastApi` instead of `responders`.
+Fork updated to use `fastapi` instead of `responders`.
 
 ## Quick start
 
@@ -29,7 +29,7 @@ Install dependencies:
 
 ```bash
 python -m venv venv
-source venv/vin/activate
+source venv/bin/activate
 pip install -r requirements
 ```
 
@@ -57,7 +57,6 @@ In the web browser go to: *http://127.0.0.1:5042/authorize*
 
 1. You will be redirected to the Strava authorization page
 2. After authorization is granted, the browser will display a raw JSON with the authorization tokens
-3. Take it from here and build on it
 
 ```
 Example Response
@@ -71,6 +70,8 @@ Example Response
   "expires_at": 1531378346,
   "state": "https://github.com/sladkovm/strava-oauth"
 }
+
+3. The output will get saved to `strava_token.json`
 ```
 
 ## API Endpoints
