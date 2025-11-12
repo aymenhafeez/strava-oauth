@@ -70,9 +70,9 @@ Example Response
   "expires_at": 1531378346,
   "state": "https://github.com/sladkovm/strava-oauth"
 }
+```
 
 3. The output will get saved to `strava_token.json`
-```
 
 ## API Endpoints
 
