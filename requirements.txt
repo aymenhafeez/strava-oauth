@@ -1,3 +1,5 @@
-responder
+fastapi
+uvicorn
+requests
 loguru
-request
+python-dotenv

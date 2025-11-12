@@ -1,9 +1,8 @@
-FROM python:3.7
-
-RUN mkdir -p /home/project/strava-oauth
-WORKDIR /home/project/strava-oauth
-COPY requirements.txt /home/project/strava-oauth
+FROM python:3.10-slim
+WORKDIR /app
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY . /home/project/strava-oauth
+COPY . .
+ENV PYTHONUNBUFFERED=1
 EXPOSE 5042
-CMD python api.py
+CMD ["uvicorn", "api:app", "--host", "0.0.0.0", "--port", "5042"]
